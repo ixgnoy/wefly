@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# CSC3402_Project
-# 🌍 TRAVEL.NOW
+# 🌍 WEFLY
 
 *Empowering seamless travel bookings with modern web technologies.*
 
@@ -85,6 +83,3 @@ Demonstration is as below:
 3. Accessing the H2 Database: <br>
    [![Db Web Dev Register New Acc Demo Video](https://i9.ytimg.com/vi_webp/7N39x59Ddkw/mqdefault.webp?v=66fa58b8&sqp=CKiw6bcG&rs=AOn4CLDSnfxoYGMcxTdx5EAlwMLuwq6J1A)](https://youtu.be/7N39x59Ddkw "Database Web Dev Demo Video of Accessing H2 Db")
 
-=======
-# wefly
->>>>>>> 301fbd616d09cfeea2583f61d8856421f59202ef
