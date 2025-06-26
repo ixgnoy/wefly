@@ -75,12 +75,5 @@ Relationship is as below:
 - One-to-One Relationship between Book and Package (one booking can be within only one package).
 
 Demonstration is as below:
-1. Login when you're a registered user:<br>
-   [![Db Web Dev Demo Video](https://i9.ytimg.com/vi_webp/umv8zJHvv3A/mqdefault.webp?v=66fa4d82&sqp=CPCY6bcG&rs=AOn4CLDwdFfDD1fSb5pAtk71AqN6ZufOlw)](https://youtu.be/umv8zJHvv3A "Database Web Dev Demo Video")
-
-2. Register a new account when you're a new user of Travel.Now: <br>
-   [![Db Web Dev Register New Acc Demo Video](https://i9.ytimg.com/vi/Gby6tjzD_EU/mqdefault.jpg?v=66fa54c7&sqp=CKSp6bcG&rs=AOn4CLAvo7shPrSI4oCarMBuwTN3f_OyrA)](https://youtu.be/Gby6tjzD_EU "Database Web Dev Demo Video of Register A New Account")
-
-3. Accessing the H2 Database: <br>
-   [![Db Web Dev Register New Acc Demo Video](https://i9.ytimg.com/vi_webp/7N39x59Ddkw/mqdefault.webp?v=66fa58b8&sqp=CKiw6bcG&rs=AOn4CLDSnfxoYGMcxTdx5EAlwMLuwq6J1A)](https://youtu.be/7N39x59Ddkw "Database Web Dev Demo Video of Accessing H2 Db")
+https://www.youtube.com/watch?v=KJgQoqapFkc
 
