@@ -22,7 +22,8 @@
   - Payment  
 - 🧩 Package Listings  
 - 🕒 Booking Sessions  
-- 💳 Payment Integration  
+- 💳 Payment Integration
+- AI (Artificial Intelligent) Chatbot 
 
 ---
 
