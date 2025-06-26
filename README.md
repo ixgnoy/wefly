@@ -6,7 +6,7 @@
 ![repo-top-language](https://img.shields.io/github/languages/top/ixgnoy/TravelNow)
 ![repo-language-count](https://img.shields.io/github/languages/count/ixgnoy/TravelNow)
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=ixgnoy.TravelNow)
-
+![License](https://img.shields.io/github/license/ixgnoy/wefly) 
 
 ---
 
@@ -86,4 +86,4 @@ Relationship is as below:
 
 Demonstration is as below:
 https://www.youtube.com/watch?v=KJgQoqapFkc
-![License](https://img.shields.io/github/license/ixgnoy/wefly) 
+
