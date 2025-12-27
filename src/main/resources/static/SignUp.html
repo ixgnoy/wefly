@@ -50,8 +50,8 @@
       pointer-events: none;
     }
 
-    .form-outline input:not(:placeholder-shown) + label,
-    .form-outline input:focus + label {
+    .form-outline input:not(:placeholder-shown)+label,
+    .form-outline input:focus+label {
       top: -1em;
       font-size: .8em;
       color: #ff5576;
@@ -86,70 +86,73 @@
 </head>
 
 <body>
-<!-- Start SignUp -->
-<section class="vh-100 gradient-custom">
-  <div class="container py-5 h-100">
-    <div class="row justify-content-center align-items-center h-100">
-      <div class="col-12 col-lg-9 col-xl-7">
-        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
-          <div class="card-body p-4 p-md-5">
-            <h2 class="logo-text">WEFLY</h2>
-            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Signing In</h3>
-            <form id="signupform" action="http://localhost:8080/user/add" method="post">
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="firstName" name="fname" class="form-control form-control-lg" required />
-                    <label class="form-label" for="firstName">First Name</label>
+  <!-- Start SignUp -->
+  <section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h2 class="logo-text">WEFLY</h2>
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Signing In</h3>
+              <form id="signupform" action="/user/add" method="post">
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="firstName" name="fname" class="form-control form-control-lg" required />
+                      <label class="form-label" for="firstName">First Name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="lastName" name="lname" class="form-control form-control-lg" required />
+                      <label class="form-label" for="lastName">Last Name</label>
+                    </div>
                   </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="lastName" name="lname" class="form-control form-control-lg" required />
-                    <label class="form-label" for="lastName">Last Name</label>
+                <div class="row">
+                  <div class="col-md-6 mb-4 d-flex align-items-center">
+                    <div class="form-outline datepicker w-100">
+                      <input type="date" id="birthdayDate" name="DOB" class="form-control form-control-lg" required />
+                      <label class="form-label" for="birthdayDate">Birthday (dd/mm/yyyy)</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="password" id="password" name="password" class="form-control form-control-lg"
+                        required />
+                      <label class="form-label" for="password">Password</label>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-4 d-flex align-items-center">
-                  <div class="form-outline datepicker w-100">
-                    <input type="date" id="birthdayDate" name="DOB" class="form-control form-control-lg" required />
-                    <label class="form-label" for="birthdayDate">Birthday (dd/mm/yyyy)</label>
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline">
+                      <input type="email" id="emailAddress" name="email" class="form-control form-control-lg"
+                        required />
+                      <label class="form-label" for="emailAddress">Email</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4 pb-2">
+                    <div class="form-outline">
+                      <input type="tel" id="phoneNumber" name="phone" class="form-control form-control-lg" required />
+                      <label class="form-label" for="phoneNumber">Phone Number</label>
+                    </div>
                   </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="password" id="password" name="password" class="form-control form-control-lg" required />
-                    <label class="form-label" for="password">Password</label>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-4 pb-2">
-                  <div class="form-outline">
-                    <input type="email" id="emailAddress" name="email" class="form-control form-control-lg" required />
-                    <label class="form-label" for="emailAddress">Email</label>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4 pb-2">
-                  <div class="form-outline">
-                    <input type="tel" id="phoneNumber" name="phone" class="form-control form-control-lg" required />
-                    <label class="form-label" for="phoneNumber">Phone Number</label>
-                  </div>
-                </div>
-              </div>
-              <div class="mt-4 pt-2">
-                <div style="display: flex; justify-content: center;">
+                <div class="mt-4 pt-2">
+                  <div style="display: flex; justify-content: center;">
                     <button type="submit" class="btn btn-outline-danger">Sign In</button>
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
+
 </html>
