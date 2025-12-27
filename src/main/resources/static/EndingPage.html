@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Receipt</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="assets/img/favicon.png" rel="icon">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url("assets/img/checkout-img.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #323232;
+            color: #fff;
+            padding: 40px;
+        }
+
+        .receipt-container {
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .receipt-container h2 {
+            color: #ff00a8;
+        }
+
+        .receipt-container p {
+            margin: 10px 0;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .print-button {
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #ff00a8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .return-button {
+            background-color: #007bff;
+        }
+
+        .contact-message {
+            text-align: center;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .contact-message a {
+            color: #ffccff;
+            text-decoration: underline;
+        }
+
+        @media print {
+            body {
+                background: none;
+                color: black;
+            }
+
+            .print-button, .return-button, .contact-message {
+                display: none;
+            }
+
+            body * {
+                visibility: hidden;
+            }
+
+            .receipt-container, .receipt-container * {
+                visibility: visible;
+            }
+
+            .receipt-container {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="receipt-container" id="receipt">
+    <h2>WEFLY Booking Receipt</h2>
+    <p><strong>Destination:</strong> <span id="rDestination"></span></p>
+    <p><strong>Start Date:</strong> <span id="rStartDate"></span></p>
+    <p><strong>End Date:</strong> <span id="rEndDate"></span></p>
+    <p><strong>Pax:</strong> <span id="rPax"></span></p>
+    <hr>
+    <p><strong>Name on Card:</strong> <span id="rCardName"></span></p>
+    <p><strong>Card Number:</strong> <span id="rCardMasked"></span></p>
+    <p><strong>Expiry:</strong> <span id="rExpiry"></span></p>
+    <hr>
+    <p><strong>Total Price:</strong> RM <span id="rTotal"></span></p>
+    <p><strong>Tax:</strong> RM <span id="rTax"></span></p>
+    <p><strong>Final Sum:</strong> RM <span id="rSum"></span></p>
+</div>
+
+<!-- Buttons -->
+<div class="button-container">
+    <button class="print-button" onclick="window.print()">Print Receipt</button>
+    <button class="print-button return-button" onclick="window.location.href='about.html'">Return to Home</button>
+</div>
+
+<!-- Help message -->
+<p class="contact-message">
+    If you face any issues, <a href="contact.html">contact us</a>.
+</p>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('rDestination').textContent = sessionStorage.getItem('destination');
+        document.getElementById('rStartDate').textContent = sessionStorage.getItem('startDate');
+        document.getElementById('rEndDate').textContent = sessionStorage.getItem('endDate');
+        document.getElementById('rPax').textContent = sessionStorage.getItem('pax');
+        document.getElementById('rCardName').textContent = sessionStorage.getItem('creditCardName');
+        document.getElementById('rCardMasked').textContent = "**** **** **** " + sessionStorage.getItem('creditCardNumber').slice(-4);
+        document.getElementById('rExpiry').textContent = sessionStorage.getItem('expiryDate');
+        document.getElementById('rTotal').textContent = sessionStorage.getItem('totalPrice');
+        document.getElementById('rTax').textContent = sessionStorage.getItem('tax');
+        document.getElementById('rSum').textContent = sessionStorage.getItem('sum');
+    });
+</script>
+
+</body>
+</html>

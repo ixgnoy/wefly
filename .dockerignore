@@ -27,6 +27,4 @@ README.md
 docs/
 
 # Other project folders not needed in Docker
-TravelNow/
 Architecture Diagram/
-data/

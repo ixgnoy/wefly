@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WEFLY Booking Receipt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            color: white;
+        }
+        .receipt-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 50px auto;
+        }
+        .receipt-container h1 {
+            color: #ff69b4; /* Pink color for title */
+        }
+        .receipt-container label {
+            font-weight: bold;
+        }
+        .receipt-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #ff69b4; /* Pink button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="receipt-container">
+    <h1>WEFLY Booking Receipt</h1>
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" readonly>
+
+    <label for="startDate">Start Date:</label>
+    <input type="text" id="startDate" readonly>
+
+    <label for="endDate">End Date:</label>
+    <input type="text" id="endDate" readonly>
+
+    <label for="pax">Pax:</label>
+    <input type="text" id="pax" readonly>
+
+    <label for="cardName">Name on Card:</label>
+    <input type="text" id="cardName" readonly>
+
+    <label for="cardNumber">Card Number:</label>
+    <input type="text" id="cardNumber" readonly>
+
+    <label for="expiryDate">Expiry:</label>
+    <input type="text" id="expiryDate" readonly>
+
+    <label for="totalPrice">Total Price:</label>
+    <input type="text" id="totalPrice" readonly>
+
+    <label for="tax">Tax:</label>
+    <input type="text" id="tax" readonly>
+
+    <label for="finalSum">Final Sum:</label>
+    <input type="text" id="finalSum" readonly>
+</div>
+
+<button class="button" onclick="printReceipt()">Print Receipt</button>
+
+<script>
+    // Function to parse query parameters
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    // Populate receipt fields with query parameters
+    document.getElementById('destination').value = getQueryParam('destination') || '';
+    document.getElementById('startDate').value = getQueryParam('startDate') || '';
+    document.getElementById('endDate').value = getQueryParam('endDate') || '';
+    document.getElementById('pax').value = getQueryParam('pax') || '';
+    document.getElementById('cardName').value = getQueryParam('cardName') || '';
+    document.getElementById('cardNumber').value = getQueryParam('cardNumber') || '';
+    document.getElementById('expiryDate').value = getQueryParam('expiryDate') || '';
+    document.getElementById('totalPrice').value = getQueryParam('totalPrice') || '';
+    document.getElementById('tax').value = getQueryParam('tax') || '';
+    document.getElementById('finalSum').value = getQueryParam('finalSum') || '';
+
+    // Print receipt function
+    function printReceipt() {
+        window.print();
+    }
+</script>
+</body>
+</html>
